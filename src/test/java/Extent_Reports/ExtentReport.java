@@ -26,7 +26,9 @@ public class ExtentReport extends Base implements ITestListener {
     public synchronized void onStart(ITestContext context) {
 
 
-        ExtentSparkReporter spark = new ExtentSparkReporter("target/surefire-reports/ExtentReport.html");
+        String reportPath = System.getProperty("user.dir") + "/target/surefire-reports/extent-report.html";
+        ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
+
         spark.config().setDocumentTitle("Automation Report");
         spark.config().setReportName("Vipin Test Execution Report P_Signal");
 
