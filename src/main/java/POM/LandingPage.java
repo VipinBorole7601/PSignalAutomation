@@ -287,8 +287,6 @@ public class LandingPage {
         else {
             System.out.println("comment missmatch");
         }
-
-
     }
 }
 

@@ -1,6 +1,4 @@
 package Extent_Reports;
-
-
 import Base.Base;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -79,8 +77,6 @@ public class ExtentReport extends Base implements ITestListener {
         }
     }
 
-
-
     public synchronized void onTestSkipped(ITestResult result) {
         test.get().log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " SKIPPED", ExtentColor.ORANGE));
         test.get().skip(result.getThrowable());
@@ -89,7 +85,6 @@ public class ExtentReport extends Base implements ITestListener {
     public synchronized void onFinish(ITestContext context) {
         extent.flush();
     }
-
 
     public String captureScreenshot(String screenshotName) throws IOException {
         TakesScreenshot ts = (TakesScreenshot) driver;
